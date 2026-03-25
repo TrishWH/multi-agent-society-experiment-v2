@@ -1,8 +1,54 @@
-# Cross-Ecosystem Multi-Agent Coordination Experiment
+# Cross-Ecosystem Multi-Agent Coordination Experiment (v2)
 
-Companion code for **"Content Infrastructure: The Missing Semantic Layer in Multi-Agent Coordination"**
+Companion code for **"Content Infrastructure: The Missing Semantic Layer in Multi-Agent Coordination"**.
 
 This is Version 2 of the [Multi-Agent Society Experiment](https://github.com/TrishWH/multi-agent-society-experiment). V1 proved that social structure determines outcomes within a single agent ecosystem. V2 asks a harder question: **what happens when two ecosystems with different governance models need to coordinate?**
+
+---
+
+## Quickstart (2 minutes)
+
+### Requirements
+- **Node.js 18+** (recommended: latest LTS)
+  - The server uses native `fetch`, which is built-in on Node 18+.
+- An **Anthropic API key**
+
+### Run locally
+
+```bash
+git clone https://github.com/TrishWH/multi-agent-society-experiment-v2.git
+cd multi-agent-society-experiment-v2
+
+npm run install:all
+
+cp .env.example .env
+# Open .env and set ANTHROPIC_API_KEY=...
+
+npm run dev
+```
+
+Then open: **http://localhost:5173**
+
+---
+
+## Troubleshooting
+
+### “Server missing ANTHROPIC_API_KEY…”
+You haven’t set your key yet.
+
+Fix:
+1. Copy `.env.example` → `.env`
+2. Edit `.env` and set `ANTHROPIC_API_KEY`
+3. Restart: `npm run dev`
+
+### “fetch is not defined”
+You’re likely on Node < 18.
+
+Fix: upgrade Node to **18+** and try again.
+
+### Frontend runs but API calls fail (/api/chat errors)
+- The Vite dev server proxies `/api/*` → `http://localhost:3001` automatically.
+- Confirm the server is running and listening on **3001** (default).
 
 ---
 
@@ -53,60 +99,21 @@ This is not a weakness in the content infrastructure thesis. It's the sophistica
 
 ---
 
-## Why This Matters
+## Cost
 
-This experiment is the simplest possible version of a problem that scales catastrophically:
-
-- Three hospital systems coordinating on a patient transfer
-- Five financial institutions settling a disputed transaction  
-- Azure agents negotiating with AWS agents negotiating with open source systems
-
-Each ecosystem brings its own definitions of "authorized," "compliant," "complete," "urgent." The governance graph (Institutional AI) can't enforce rules that aren't semantically shared. MCP and A2A can transport messages between ecosystems. Neither addresses what the words in those messages actually mean.
-
-Content infrastructure is the semantic precondition for cross-ecosystem coordination. You can't build the governance layer until the meaning layer exists.
-
----
-
-## Relationship to Existing Work
-
-| Protocol/Framework | Solves | Doesn't solve |
-|---|---|---|
-| **MCP** (Anthropic) | How agents access tools and resources | What the words in those interactions mean |
-| **A2A** (Google) | How agents discover and delegate to each other | Whether they share semantic definitions |
-| **Institutional AI** (Bracale Syrnikov et al., 2026) | Governance graphs that make compliance incentive-compatible | The semantic substrate the governance graph runs on |
-| **Content Infrastructure** (this experiment) | Shared meaning layer for cross-ecosystem coordination | Everything else (that's the point) |
-
----
-
-## Setup
-
-**Requirements:** Node.js, an Anthropic API key
-
-```bash
-git clone https://github.com/TrishWH/multi-agent-society-experiment-v2.git
-cd multi-agent-society-experiment-v2
-npm run install:all
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
-npm run dev
-```
-
-Open `http://localhost:5173`
-
-**Cost:** ~$4–6 per test run (3 rounds), ~$12–18 per full run (4 rounds)
+- **Test Mode:** ~$4–6 per test run (3 rounds)  
+- **Full Run:** ~$12–18 per full run (4 rounds)
 
 ---
 
 ## Run Your Own Experiment
 
-1. Toggle between **Test Mode** (3 rounds, ~$5) and **Full Run** (4 rounds, ~$15)
+1. Toggle between **Test Mode** (3 rounds) and **Full Run** (4 rounds)
 2. Click **Run Cross-Ecosystem Experiment**
 3. Watch three regimes run sequentially — Ungoverned, Constitutional, Institutional
 4. Download the full transcript and analysis
 
 Change the scenario. Change the cities. Change the governance philosophies. See what breaks.
-
-If you get results worth sharing, open an issue or find me on LinkedIn.
 
 ---
 
@@ -127,21 +134,10 @@ If you get results worth sharing, open an issue or find me on LinkedIn.
 ---
 
 ## Related Work
-
 - [V1 Experiment](https://github.com/TrishWH/multi-agent-society-experiment) — social structure within a single ecosystem
 - [Original article](https://medium.com/words-in-tech/e5dd9c063310) — "Your Multi-Agent System Just Recreated Every Org Dysfunction You've Ever Hated"
 - Bracale Syrnikov et al. (2026) — Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets
 - Anthropic Persona Selection Model — if agents simulate characters, multi-agent systems need a shared author
-
----
-
-## The Thesis
-
-Design systems solved visual consistency by making design decisions infrastructure. Content has never had an equivalent layer.
-
-Content infrastructure is that missing layer — structured semantic decisions that the whole system inherits from. Not a style guide. Not a prompt. Not memory. A semantic contract that defines what words mean across ecosystems, so agents aren't just speaking the same language — they're speaking it with the same dictionary.
-
-Agents didn't create this problem. They made the cost of ignoring it undeniable.
 
 ---
 
