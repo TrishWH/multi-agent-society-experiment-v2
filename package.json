@@ -2,9 +2,13 @@
   "name": "pet-license-rebrand",
   "private": true,
   "version": "1.0.0",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm run dev",
     "server": "cd server && node index.js",
     "client": "cd client && npm run dev",
     "build": "cd client && npm run build"
