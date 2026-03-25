@@ -89,3 +89,61 @@ npm run install:all
 cp .env.example .env
 # Edit .env and add your ANTHROPIC_API_KEY
 npm run dev
+```
+
+Open `http://localhost:5173`
+
+**Cost:** ~$4–6 per test run (3 rounds), ~$12–18 per full run (4 rounds)
+
+---
+
+## Run Your Own Experiment
+
+1. Toggle between **Test Mode** (3 rounds, ~$5) and **Full Run** (4 rounds, ~$15)
+2. Click **Run Cross-Ecosystem Experiment**
+3. Watch three regimes run sequentially — Ungoverned, Constitutional, Institutional
+4. Download the full transcript and analysis
+
+Change the scenario. Change the cities. Change the governance philosophies. See what breaks.
+
+If you get results worth sharing, open an issue or find me on LinkedIn.
+
+---
+
+## The Cast
+
+**Millbrook** (consensus governance)
+- Mayor Chen — Consensus Facilitator
+- Welfare Advocate Rivera — Equity Voice  
+- Budget Coordinator Kim — Resource Steward
+- Community Ops Lead Santos — Implementation Guide
+
+**Harborview** (hierarchical governance)
+- Commissioner Park — Executive Authority
+- City Counsel Torres — Legal Authority
+- Finance Director Walsh — Fiscal Authority
+- Operations Director Lee — Implementation Authority
+
+---
+
+## Related Work
+
+- [V1 Experiment](https://github.com/TrishWH/multi-agent-society-experiment) — social structure within a single ecosystem
+- [Original article](https://medium.com/words-in-tech/e5dd9c063310) — "Your Multi-Agent System Just Recreated Every Org Dysfunction You've Ever Hated"
+- Bracale Syrnikov et al. (2026) — Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets
+- Anthropic Persona Selection Model — if agents simulate characters, multi-agent systems need a shared author
+
+---
+
+## The Thesis
+
+Design systems solved visual consistency by making design decisions infrastructure. Content has never had an equivalent layer.
+
+Content infrastructure is that missing layer — structured semantic decisions that the whole system inherits from. Not a style guide. Not a prompt. Not memory. A semantic contract that defines what words mean across ecosystems, so agents aren't just speaking the same language — they're speaking it with the same dictionary.
+
+Agents didn't create this problem. They made the cost of ignoring it undeniable.
+
+---
+
+*Built by Trish Winter-Hunt, Senior Product Design Manager, Azure AI Foundry*  
+*Part of ongoing research into Agentic Experience (AX) design and content infrastructure*
